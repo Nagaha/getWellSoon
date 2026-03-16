@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Well Soon 💛</title>
+
+<style>
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ffd6e7,#fff3c7);
+    text-align:center;
+    padding:40px;
+    color:#444;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+}
+
+h1{
+    font-size:32px;
+}
+
+.quote-box{
+    margin-top:30px;
+    padding:25px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff7aa2;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin:10px;
+}
+
+button:hover{
+    background:#ff5d8a;
+}
+
+.checklist{
+    text-align:left;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-top:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.hidden{
+    display:none;
+}
+
+.progress{
+    margin-top:25px;
+    font-weight:bold;
+}
+
+.heart{
+    position:fixed;
+    font-size:20px;
+    animation:float 4s linear infinite;
+}
+
+@keyframes float{
+    from{transform:translateY(0)}
+    to{transform:translateY(-800px)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hey Sleepy Patient 😌</h1>
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+<p>
+This tiny website exists for only one reason…  
+<strong>To make you smile while you recover.</strong>
+</p>
+
+<p style="font-size:18px">
+ஹாய்… ரெஸ்ட் எடுக்குற சூப்பர் ஹீரோ! 💛  
+இந்த சின்ன website உனக்கு ஒரு smile கொடுக்க தான்.
+</p>
+
+<button onclick="start()">I Promise I'll Smile 😄</button>
+
+<div class="quote-box hidden" id="quotes">
+
+<h2>🌸 Little Messages For You</h2>
+
+<p id="quoteText"></p>
+
+<button onclick="nextQuote()">Next Quote</button>
+
+</div>
+
+
+<div class="checklist hidden" id="checklist">
+
+<h2>👨‍⚕️ Doctor's Special Instructions</h2>
+
+<label><input type="checkbox"> Take medicines</label><br><br>
+<label><input type="checkbox"> Sleep properly</label><br><br>
+<label><input type="checkbox"> Watch something fun</label><br><br>
+<label><input type="checkbox"> Text your favorite person (me obviously)</label>
+
+</div>
+
+
+<div class="progress hidden" id="progress">
+
+<h2>Recovery Loading...</h2>
+
+<p>██████░░░░ 60%</p>
+
+</div>
+
+
+<button class="hidden" id="hugBtn" onclick="hug()">🤗 Press for Virtual Hug</button>
+
+<p id="hugText"></p>
+
+
+<button class="hidden" id="surpriseBtn" onclick="surprise()">Click if you are bored 😏</button>
+<button onclick="secret()">🤫 Secret Confession</button>
+<p id="secretText"></p>
+<p id="surpriseText"></p>
+
+</div>
+
+<script>
+
+const quotes = [
+
+`"இது ஒரு break தான்… முடிவு இல்ல."
+This is just a pause, not the end of the story.`,
+
+`"நீ strong இல்லனா யாரு strong?"
+If you're not strong, then who is?`,
+
+`"சின்ன rest எடுத்துட்டு இன்னும் stronger ஆக comeback பண்ணு."
+Take a little rest… come back even stronger.`,
+
+`"நீ சிரிச்சா தான் உலகம் normal ஆகும்."
+The world feels normal only when you smile.`,
+
+`"Operation முடிஞ்சாச்சு… Drama இன்னும் pending 😌"
+Surgery done. Now waiting for your dramatic recovery.`,
+
+`உன் friend circle பெரியது…
+ஆனா உன் heart அதைவிட பெரியது.
+Your friend circle is big… but your heart is even bigger.`,
+
+`யாரையும் இழக்க கூடாது என்று நினைக்குற மனசு ரொம்ப rare.
+A heart that never wants to lose anyone is a rare one.`
+
+]
+
+let index = 0
+
+function start(){
+document.getElementById("bgMusic").play();
+
+document.getElementById("quotes").classList.remove("hidden")
+document.getElementById("checklist").classList.remove("hidden")
+document.getElementById("progress").classList.remove("hidden")
+document.getElementById("hugBtn").classList.remove("hidden")
+document.getElementById("surpriseBtn").classList.remove("hidden")
+
+showQuote()
+
+}
+
+function showQuote(){
+document.getElementById("quoteText").innerText = quotes[index]
+}
+
+function nextQuote(){
+
+index++
+
+if(index>=quotes.length){
+index=0
+}
+
+showQuote()
+
+}
+
+function hug(){
+
+document.getElementById("hugText").innerText =
+"Sending you a BIG virtual hug 🤗 Recover soon!"
+
+}
+
+function surprise(){
+
+document.getElementById("surpriseText").innerHTML = `
+<h3>Things we MUST do after you recover 😏</h3>
+
+<ul style="text-align:left; max-width:400px; margin:auto; line-height:2;">
+<li>🌴 Nangdhi Mandhi</li>
+<li>🐻 Polar Bear</li>
+<li>🧇 Waffle without Abdul</li>
+<li>🍗 KFC</li>
+<li>🌅 Sunrise in beach</li>
+<li>🍡 Kollukattai</li>
+</ul>
+
+<p style="margin-top:10px;font-weight:bold;">
+Recovery mission objective: COMPLETE ALL 😌
+</p>
+`
+
+}
+
+function secret(){
+
+document.getElementById("secretText").innerHTML = `
+<h3>Okay fine… I have a secret confession 😶</h3>
+
+<p>
+While you were busy recovering...  
+I think I developed a secret crush.
+</p>
+
+<p style="font-weight:bold;">
+On your sister 😏
+</p>
+
+<p>
+Just kidding! Relax 😂  
+Your recovery is the only mission right now.
+</p>
+
+<p>
+Doctor's order: Get well soon so I can continue annoying you in person.
+</p>
+`;
+
+}
+setInterval(()=>{
+
+const heart=document.createElement("div")
+
+heart.className="heart"
+heart.innerHTML="💖"
+
+heart.style.left=Math.random()*100+"vw"
+
+document.body.appendChild(heart)
+
+setTimeout(()=>heart.remove(),4000)
+
+},800)
+
+</script>
+
+</body>
+</html>
