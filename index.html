@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Well Soon 💛</title>
+<title>Get Well Soon Chituu💛</title>
 
 <style>
 
@@ -117,7 +117,7 @@ This tiny website exists for only one reason…
 <label><input type="checkbox"> Take medicines</label><br><br>
 <label><input type="checkbox"> Sleep properly</label><br><br>
 <label><input type="checkbox"> Watch something fun</label><br><br>
-<label><input type="checkbox"> Text your favorite person (me obviously)</label>
+<label><input type="checkbox"> Text your favorite person </label>
 
 </div>
 
@@ -137,7 +137,7 @@ This tiny website exists for only one reason…
 
 
 <button class="hidden" id="surpriseBtn" onclick="surprise()">Click if you are bored 😏</button>
-<button onclick="secret()">🤫 Secret Confession</button>
+<!-- <button onclick="secret()">🤫 Secret Confession</button> -->
 <p id="secretText"></p>
 <p id="surpriseText"></p>
 
@@ -160,14 +160,7 @@ Take a little rest… come back even stronger.`,
 The world feels normal only when you smile.`,
 
 `"Operation முடிஞ்சாச்சு… Drama இன்னும் pending 😌"
-Surgery done. Now waiting for your dramatic recovery.`,
-
-`உன் friend circle பெரியது…
-ஆனா உன் heart அதைவிட பெரியது.
-Your friend circle is big… but your heart is even bigger.`,
-
-`யாரையும் இழக்க கூடாது என்று நினைக்குற மனசு ரொம்ப rare.
-A heart that never wants to lose anyone is a rare one.`
+Surgery done. Now waiting for your dramatic recovery.`
 
 ]
 
@@ -178,9 +171,9 @@ document.getElementById("bgMusic").play();
 
 document.getElementById("quotes").classList.remove("hidden")
 document.getElementById("checklist").classList.remove("hidden")
-document.getElementById("progress").classList.remove("hidden")
-document.getElementById("hugBtn").classList.remove("hidden")
-document.getElementById("surpriseBtn").classList.remove("hidden")
+// document.getElementById("progress").classList.remove("hidden")
+// document.getElementById("hugBtn").classList.remove("hidden")
+// document.getElementById("surpriseBtn").classList.remove("hidden")
 
 showQuote()
 
@@ -202,59 +195,59 @@ showQuote()
 
 }
 
-function hug(){
+// function hug(){
 
-document.getElementById("hugText").innerText =
-"Sending you a BIG virtual hug 🤗 Recover soon!"
+// document.getElementById("hugText").innerText =
+// "Sending you a BIG virtual hug 🤗 Recover soon!"
 
-}
+// }
 
-function surprise(){
+// function surprise(){
 
-document.getElementById("surpriseText").innerHTML = `
-<h3>Things we MUST do after you recover 😏</h3>
+// document.getElementById("surpriseText").innerHTML = `
+// <h3>Things we MUST do after you recover 😏</h3>
 
-<ul style="text-align:left; max-width:400px; margin:auto; line-height:2;">
-<li>🌴 Nangdhi Mandhi</li>
-<li>🐻 Polar Bear</li>
-<li>🧇 Waffle without Abdul</li>
-<li>🍗 KFC</li>
-<li>🌅 Sunrise in beach</li>
-<li>🍡 Kollukattai</li>
-</ul>
+// <ul style="text-align:left; max-width:400px; margin:auto; line-height:2;">
+// <li>🌴 Nangdhi Mandhi</li>
+// <li>🐻 Polar Bear</li>
+// <li>🧇 Waffle without Abdul</li>
+// <li>🍗 KFC</li>
+// <li>🌅 Sunrise in beach</li>
+// <li>🍡 Kollukattai</li>
+// </ul>
 
-<p style="margin-top:10px;font-weight:bold;">
-Recovery mission objective: COMPLETE ALL 😌
-</p>
-`
+// <p style="margin-top:10px;font-weight:bold;">
+// Recovery mission objective: COMPLETE ALL 😌
+// </p>
+// `
 
-}
+// }
 
-function secret(){
+// function secret(){
 
-document.getElementById("secretText").innerHTML = `
-<h3>Okay fine… I have a secret confession 😶</h3>
+// document.getElementById("secretText").innerHTML = `
+// <h3>Okay fine… I have a secret confession 😶</h3>
 
-<p>
-While you were busy recovering...  
-I think I developed a secret crush.
-</p>
+// <p>
+// While you were busy recovering...  
+// I think I developed a secret crush.
+// </p>
 
-<p style="font-weight:bold;">
-On your sister 😏
-</p>
+// <p style="font-weight:bold;">
+// On your sister 😏
+// </p>
 
-<p>
-Just kidding! Relax 😂  
-Your recovery is the only mission right now.
-</p>
+// <p>
+// Just kidding! Relax 😂  
+// Your recovery is the only mission right now.
+// </p>
 
-<p>
-Doctor's order: Get well soon so I can continue annoying you in person.
-</p>
-`;
+// <p>
+// Doctor's order: Get well soon so I can continue annoying you in person.
+// </p>
+// `;
 
-}
+// }
 setInterval(()=>{
 
 const heart=document.createElement("div")
